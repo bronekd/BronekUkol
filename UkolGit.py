@@ -4,10 +4,10 @@
 # Hotovo
 #Úkol 2
 #Vytvořte složku se dvěma podsložkami. Přidejte několik souborů do každá podsložka.
-
+# Hotovo
 #Úkol 3
 #Vytvořte úložiště v hlavní složce.
-
+# Hotovo
 #Úkol 4
 #Přidejte obsah dvou podsložek do indexu úložiště pomocí tohoto příkazu: git add.
 
