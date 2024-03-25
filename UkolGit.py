@@ -1,7 +1,7 @@
 # Soubor vytvořený pro úkol a práci s git.
 #Úkol 1
 #Nainstalujte a nakonfigurujte Git na místním počítači.
-
+# Hotovo
 #Úkol 2
 #Vytvořte složku se dvěma podsložkami. Přidejte několik souborů do každá podsložka.
 
