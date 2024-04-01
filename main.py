@@ -1,16 +1,15 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+#Úkol 1
+#Máte dva textové soubory. Zjistěte, zda se jejich linie shodují. Pokud ne, vytiskněte neshodující se řádek z každého souboru.
+#Úkol 2
+#Máte textový soubor. Vytvořte nový soubor a zapište do něj následující statistiky založené na zdrojovém souboru:
+#■ Počet znaků; ■ Počet řádků;
+#■ Počet samohlásek;
+#■ Počet souhlásek; ■ Počet číslic.
+#Úkol 3
+#Máte textový soubor. Odstraňte z něj poslední řádek. Výsledek zapište do jiného souboru.
+#Úkol 4
+#Máte textový soubor. Najděte délku nejdelší čáry.
+#Úkol 5
+#Máte textový soubor. Spočítejte, kolikrát se v něm vyskytuje slovo určené uživatelem.
+#Úkol 6
+#Máte textový soubor. Najděte a nahraďte zadané slovo. Uživatel určuje, co má hledat a čím má být nahrazeno.
