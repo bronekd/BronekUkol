@@ -61,7 +61,7 @@ print(f"Počet číslic: {pocet_cislic}\n")
 
 #Úkol 3
 #Máte textový soubor. Odstraňte z něj poslední řádek. Výsledek zapište do jiného souboru.
-
+"""
 #Otevření souboru
 with open("Task3.txt", "r") as source_file:
     lines = source_file.readlines()
@@ -74,11 +74,24 @@ with open("Task3_output.txt", "w") as target_file:
     for line in lines:
         target_file.write(line)
         print(f"Zapíši: {line}")
-
+"""
 
 
 #Úkol 4
 #Máte textový soubor. Najděte délku nejdelší čáry.
+
+max_lenght = 0
+
+with open("Task4.txt", "r") as file:
+    for line in file:
+        lenght_line = len(line)
+
+        if lenght_line > max_lenght:
+            max_lenght = lenght_line
+
+print(f"Délka nejdelšího řádku: {max_lenght}")
+
+
 
 
 #Úkol 5
