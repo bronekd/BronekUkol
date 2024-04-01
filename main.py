@@ -1,5 +1,6 @@
 #Úkol 1
 #Máte dva textové soubory. Zjistěte, zda se jejich linie shodují. Pokud ne, vytiskněte neshodující se řádek z každého souboru.
+"""
 with open('Task1_1.txt', 'r') as file1, open('Task1_2.txt', 'r') as file2:
     lines1 = file1.readlines()
     lines2 = file2.readlines()
@@ -15,12 +16,47 @@ for i in range(max_len):
         print(f"Chyba na řádku {i + 1}:\nSoubor 1: {lines1[i]} Soubor 2: Chybí řádek")
     elif i < len(lines2):
         print(f"Chyba na řádku {i + 1}:\nSoubor 1: Chybí řádek Soubor 2: {lines2[i]}")
-
+"""
 #Úkol 2
 #Máte textový soubor. Vytvořte nový soubor a zapište do něj následující statistiky založené na zdrojovém souboru:
-#■ Počet znaků; ■ Počet řádků;
+#■ Počet znaků;
+# ■ Počet řádků;
 #■ Počet samohlásek;
-#■ Počet souhlásek; ■ Počet číslic.
+#■ Počet souhlásek;
+# ■ Počet číslic.
+
+pocet_znaku = pocet_radku = pocet_samohlasek = pocet_souhlasek = pocet_cislic = 0
+samohlasky = "aeiouyáéěíóúůýAEIOUYÁÉĚÍÓÚŮÝ"
+souhlasky = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ"
+
+#Čtení
+with open('Task2_source.txt', 'r') as soubor:
+    for radek in soubor:
+        pocet_radku += 1
+        pocet_znaku += len(radek)
+        for znak in radek:
+            if znak.lower() in samohlasky:
+                pocet_samohlasek += 1
+            elif znak.lower() in souhlasky:
+                pocet_souhlasek += 1
+            elif znak.isdigit():
+                pocet_cislic += 1
+
+
+#Zápis
+with open('Task2_statistic.txt', 'w') as vystup:
+    vystup.write(f"Počet znaků: {pocet_znaku}\n")
+    vystup.write(f"Počet řádků: {pocet_radku}\n")
+    vystup.write(f"Počet samohlásek: {pocet_samohlasek}\n")
+    vystup.write(f"Počet souhlásek: {pocet_souhlasek}\n")
+    vystup.write(f"Počet číslic: {pocet_cislic}\n")
+
+print(f"Počet znaků: {pocet_znaku}\n")
+print(f"Počet řádků: {pocet_radku}\n")
+print(f"Počet samohlásek: {pocet_samohlasek}\n")
+print(f"Počet souhlásek: {pocet_souhlasek}\n")
+print(f"Počet číslic: {pocet_cislic}\n")
+
 
 
 #Úkol 3
