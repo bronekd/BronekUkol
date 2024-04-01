@@ -9,8 +9,12 @@ max_len = max(len(lines1), len(lines2))
 for i in range(max_len):
     if i < len(lines1) and i < len(lines2):
         if lines1[i] != lines2[i]: #Shoda stejných řádků
-            print(f"Chyba na řádku {i+1}:\nSoubor 1: {lines1[i]}Soubor 2: {lines2[i]}")
-
+            print(f"Chyba na řádku {i+1}:\nSoubor 1: {lines1[i]} Soubor 2: {lines2[i]}")
+    #Ošetření více řídků v souboru
+    elif i < len(lines1):
+        print(f"Chyba na řádku {i + 1}:\nSoubor 1: {lines1[i]} Soubor 2: Chybí řádek")
+    elif i < len(lines2):
+        print(f"Chyba na řádku {i + 1}:\nSoubor 1: Chybí řádek Soubor 2: {lines2[i]}")
 
 #Úkol 2
 #Máte textový soubor. Vytvořte nový soubor a zapište do něj následující statistiky založené na zdrojovém souboru:
