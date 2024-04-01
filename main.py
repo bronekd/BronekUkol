@@ -79,7 +79,7 @@ with open("Task3_output.txt", "w") as target_file:
 
 #Úkol 4
 #Máte textový soubor. Najděte délku nejdelší čáry.
-
+"""
 max_lenght = 0
 cislo_nejdelsiho_radku = 0
 aktualni_cislo_radku = 0
@@ -96,11 +96,29 @@ with open("Task4.txt", "r") as file:
 print(f"Délka nejdelšího řádku: {max_lenght}")
 print(f"Číslo řádku s nejdelším textem: {cislo_nejdelsiho_radku}")
 
-
+"""
 
 
 #Úkol 5
 #Máte textový soubor. Spočítejte, kolikrát se v něm vyskytuje slovo určené uživatelem.
+
+#hledané slovo
+hledane_slovo = input("Zadej slovo pro vyhledání:  ").strip()   #Zadejte ahoj
+
+#Proměná pro výpočet vyskytů
+pocet_slov = 0
+
+with open("Task5.txt", "r") as file:
+    for line in file:
+        #rozdeleni slov
+        slova = line.strip().split()
+        #počítání výskytů
+        for slovo in slova:
+            if slovo.lower() == hledane_slovo.lower():
+                pocet_slov += 1
+
+print(f"Slovo {hledane_slovo} se v souboru vyskytuje {pocet_slov}.")
+
 
 
 #Úkol 6
