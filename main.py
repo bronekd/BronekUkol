@@ -101,7 +101,7 @@ print(f"Číslo řádku s nejdelším textem: {cislo_nejdelsiho_radku}")
 
 #Úkol 5
 #Máte textový soubor. Spočítejte, kolikrát se v něm vyskytuje slovo určené uživatelem.
-
+"""
 #hledané slovo
 hledane_slovo = input("Zadej slovo pro vyhledání:  ").strip()   #Zadejte ahoj
 
@@ -119,10 +119,22 @@ with open("Task5.txt", "r") as file:
 
 print(f"Slovo {hledane_slovo} se v souboru vyskytuje {pocet_slov}.")
 
-
+"""
 
 #Úkol 6
 #Máte textový soubor. Najděte a nahraďte zadané slovo. Uživatel určuje, co má hledat a čím má být nahrazeno.
 
+hledane_slovo = input("Zadej hledané slovo (ahoj): ").strip()
+nahradni_slovo = input("Zadej slovo pro nahrazeni (Dobrý den): ").strip()
 
+with open("Task6.txt", "r") as file:
+    obsah = file.read()
 
+#nahrazeni
+upraveny_obsah = obsah.replace(hledane_slovo, nahradni_slovo)
+
+#zápis upraveného obsahu
+with open("Task6_output.txt", "w") as file2:
+    file2.write(upraveny_obsah)
+
+print(f"Slovo {hledane_slovo} bylo nahrazeno slovem {nahradni_slovo} v souboru.")
