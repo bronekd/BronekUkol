@@ -81,15 +81,20 @@ with open("Task3_output.txt", "w") as target_file:
 #Máte textový soubor. Najděte délku nejdelší čáry.
 
 max_lenght = 0
+cislo_nejdelsiho_radku = 0
+aktualni_cislo_radku = 0
 
 with open("Task4.txt", "r") as file:
     for line in file:
-        lenght_line = len(line)
+        aktualni_cislo_radku += 1 # zvýšíme číslo řádku
+        lenght_line = len(line.rstrip("\n")) # Odebrání nového řádku z délky v případě potřeby
 
         if lenght_line > max_lenght:
             max_lenght = lenght_line
+            cislo_nejdelsiho_radku = aktualni_cislo_radku
 
 print(f"Délka nejdelšího řádku: {max_lenght}")
+print(f"Číslo řádku s nejdelším textem: {cislo_nejdelsiho_radku}")
 
 
 
