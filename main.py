@@ -24,7 +24,7 @@ for i in range(max_len):
 #■ Počet samohlásek;
 #■ Počet souhlásek;
 # ■ Počet číslic.
-
+"""
 pocet_znaku = pocet_radku = pocet_samohlasek = pocet_souhlasek = pocet_cislic = 0
 samohlasky = "aeiouyáéěíóúůýAEIOUYÁÉĚÍÓÚŮÝ"
 souhlasky = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ"
@@ -57,10 +57,24 @@ print(f"Počet samohlásek: {pocet_samohlasek}\n")
 print(f"Počet souhlásek: {pocet_souhlasek}\n")
 print(f"Počet číslic: {pocet_cislic}\n")
 
-
+"""
 
 #Úkol 3
 #Máte textový soubor. Odstraňte z něj poslední řádek. Výsledek zapište do jiného souboru.
+
+#Otevření souboru
+with open("Task3.txt", "r") as source_file:
+    lines = source_file.readlines()
+
+# odebrání posledního řádku
+lines.pop()
+
+#zápis
+with open("Task3_output.txt", "w") as target_file:
+    for line in lines:
+        target_file.write(line)
+        print(f"Zapíši: {line}")
+
 
 
 #Úkol 4
